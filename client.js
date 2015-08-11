@@ -17,7 +17,7 @@ var client = {
 var udp_in = dgram.createSocket('udp4');
 
 var getNetworkIP = function(callback) {
-  var socket = net.createConnection(80, rendezvous.address);
+  var socket = net.createConnection(80, 'baidu.com');
   socket.on('connect', function() {
     callback(undefined, socket.address().address);
       socket.end();
